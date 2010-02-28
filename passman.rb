@@ -9,5 +9,5 @@ use Rack::Auth::Basic do |username, password|
 end
 
 get '/' do
-  "#{DATABASE_URL}"
+  "Hello Passman!"
 end
