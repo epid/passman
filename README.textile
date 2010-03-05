@@ -1,0 +1,13 @@
+h1. PassMan - A web-based password manager based on Sinatra and Sequel
+
+h2. Overview
+
+PassMan is designed to be a centralized place to store all of you passwords. The passwords are encrypted and saved into the database in case it is compromised.
+
+h2. Setup
+
+h2. TODO
+
+h2. About
+
+Written by Jared Giles
