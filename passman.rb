@@ -14,5 +14,12 @@ use Rack::Auth::Basic do |username, password|
 end
 
 get '/' do
-  "#{Entry.first.notes}"
+  @entries = Entry.all
+  haml :main
+end
+
+get '/e/:entry' do
+  @entry = Entry[params[:entry]]
+  halt [ 404, 'Entry not found!' ] unless @entry
+  haml :show
 end

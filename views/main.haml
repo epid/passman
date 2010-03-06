@@ -1,0 +1,5 @@
+#main
+  %h2 Password Listing
+  - @entries.each do |e|
+    .entry_title== <a href="/e/#{e.id}">#{e.title}</a>
+

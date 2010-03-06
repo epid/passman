@@ -27,10 +27,17 @@ class Entry < Sequel::Model
       DateTime    :updated_at
     end
     create_table
-    insert( :title => 'Test Entry',
+    insert( :title => 'Test Entry One',
             :username => 'test_user',
             :password => 'test_password',
             :notes => 'Here is a test note.',
+            :created_at => Time.now,
+            :updated_at => Time.now
+    )
+    insert( :title => 'Test Entry Two',
+            :username => 'test_user',
+            :password => 'test_password2',
+            :notes => 'Here is another test note.',
             :created_at => Time.now,
             :updated_at => Time.now
     )
