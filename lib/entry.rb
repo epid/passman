@@ -19,14 +19,20 @@ class Entry < Sequel::Model
   unless table_exists?
     set_schema do
       primary_key :id
-      string      :title
-      string      :username
-      string      :password
-      text        :notes
-      datetime    :created_at
-      datetime    :updated_at
+      String      :title
+      String      :username
+      String      :password
+      Text        :notes
+      DateTime    :created_at
+      DateTime    :updated_at
     end
     create_table
-    insert( :title => 'Test Entry', :username => 'test_user', :password => 'test_password', :notes => 'Here is a test note.' )
+    insert( :title => 'Test Entry',
+            :username => 'test_user',
+            :password => 'test_password',
+            :notes => 'Here is a test note.',
+            :created_at => Time.now,
+            :updated_at => Time.now
+    )
   end
 end
