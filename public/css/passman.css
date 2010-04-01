@@ -1,0 +1,22 @@
+body {
+  background: #333;
+  color: white;
+}
+a:link, a:visited { color: white; text-decoration: underline; }
+a:hover { color: gray; text-decoration: underline; }
+a:active { color: red; text-decoration: underline; }
+  
+div#header {
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 2px 2px 2px #000;
+  border: 1px solid black;
+  background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#666));
+}
+div#sidebar {
+  border: 1px solid black;
+  padding: 1em;
+}
+div#main {
+  padding: 1em;
+}

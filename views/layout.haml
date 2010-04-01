@@ -3,7 +3,17 @@
   %head
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html;charset=utf-8'}/
     %title PassMan - A web-based password manager
-    %link{:rel => 'stylesheet', :href => '/stylesheets/layout.css', :type => 'text/css', :media => 'screen'}
+    %link{:rel => 'stylesheet', :href => '/css/reset.css', :type => 'text/css', :media => 'screen'}
+    %link{:rel => 'stylesheet', :href => '/css/960.css', :type => 'text/css', :media => 'screen'}
+    %link{:rel => 'stylesheet', :href => '/css/text.css', :type => 'text/css', :media => 'screen'}
+    %link{:rel => 'stylesheet', :href => '/css/passman.css', :type => 'text/css', :media => 'screen'}
   %body
-    #container
-      = yield
+    .container_16
+      .grid_16
+        #header PassMan
+      .grid_4
+        #sidebar
+          Sidebar
+          = '<br />' * 25
+      .grid_12
+        = yield
